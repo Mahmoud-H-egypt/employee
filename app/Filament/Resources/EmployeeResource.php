@@ -41,19 +41,19 @@ class EmployeeResource extends Resource
                DatePicker::make('hireddate')->required(),
                Select::make('groupe_id')
                 ->label('Groupe')
-                ->options(Groupe::all()->pluck('name','id')),
+                ->options(Groupe::all()->pluck('name','id'))->required(),
 
                 Select::make('city_id')
                 ->label('City')
-                ->options(City::all()->pluck('name','id')),
+                ->options(City::all()->pluck('name','id'))->required(),
 
                 Select::make('country_id')
                 ->label('Country')
-                ->options(Country::all()->pluck('name','id')),
+                ->options(Country::all()->pluck('name','id'))->required(),
 
                 Select::make('department_id')
                 ->label('Department')
-                ->options(Department::all()->pluck('name','id')),
+                ->options(Department::all()->pluck('name','id'))->required(),
 
             ]);
     }
